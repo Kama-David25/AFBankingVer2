@@ -1,4 +1,4 @@
-package com.example.afbanking.data
+package com.example.afbanking.common
 
 object Constants {
     const val url: String = "http://localhost:3000/bankUser/"
