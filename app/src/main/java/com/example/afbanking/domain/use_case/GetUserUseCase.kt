@@ -10,18 +10,18 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class GetUserUseCase @Inject constructor(
-    private val uR: UserRepo
-){
-    operator fun invoke(routingNum: String): Flow<Resource<User>> = flow{
-        try {
-            emit(Resource.Loading())
-            val user = uR.getUserByRNum(routingNum).toUser()
-            emit(Resource.Success(user))
-        }catch(e: HttpException){
-            emit(Resource.Error(e.localizedMessage ?: "Unexpected Error."))
-        }catch(e: IOException){
-            emit(Resource.Error("Error! Check Connection."))
-        }
-    }
-}
+//class GetUserUseCase @Inject constructor(
+//    private val uR: UserRepo
+//){
+//    operator fun invoke(routingNum: String): Flow<Resource<User>> = flow{
+//        try {
+//            emit(Resource.Loading())
+//            val user = uR.getUserByRNum(routingNum).toUser()
+//            emit(Resource.Success(user))
+//        }catch(e: HttpException){
+//            emit(Resource.Error(e.localizedMessage ?: "Unexpected Error."))
+//        }catch(e: IOException){
+//            emit(Resource.Error("Error! Check Connection."))
+//        }
+//    }
+//}
