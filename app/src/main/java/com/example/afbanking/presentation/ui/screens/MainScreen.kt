@@ -66,7 +66,7 @@ fun TopBar(user: User){
         )
 
         Text(
-            text = user.name,
+            text = user.firstName,
             modifier = Modifier
                 .padding(top = 8.dp),
             color = MaterialTheme.colors.onSecondary,
