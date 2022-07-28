@@ -6,7 +6,7 @@ import com.example.afbanking.Model.domain.model.UserDto
 import com.example.afbanking.Model.domain.model.toUser
 import javax.inject.Inject
 
-class UserRepoImplementation @Inject constructor(
+class TransactionImpl @Inject constructor(
     private val apiCall: AFBankApi
 ): ITransactionRepo{
 
@@ -14,24 +14,20 @@ class UserRepoImplementation @Inject constructor(
      * Remember to call these methods in a coroutine
      **/
 
-    suspend fun getUserByRNum(routingNum: String): UserDto {
-        return apiCall.getUserByRoutNum(routingNum)
-    }
-
     override suspend fun getUserByRoutingNum(routingNumber: String): UserDto {
-        return apiCall.getUserByRoutNum(routingNumber)
+        return apiCall.getUserByRoutingNum(routingNumber)
     }
 
     //Takes in an amount and adds to current account balance
     override suspend fun depositById(routingNum: String, amount: Double) {
-        val bu = getUserByRNum(routingNum).toUser()
+        val bu = getUserByRoutingNum(routingNum).toUser()
         bu.accountBalance + amount
         //return apiCall.updateBalance()
     }
 
     //Takes in an amount and subtracts from current account balance
     override suspend fun withdrawById(routingNum: String, amount: Double){
-        val bu = getUserByRNum(routingNum).toUser()
+        val bu = getUserByRoutingNum(routingNum).toUser()
         //return bu.accountBalance - amount
     }
 
