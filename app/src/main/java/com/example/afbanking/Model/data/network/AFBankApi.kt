@@ -12,7 +12,7 @@ interface AFBankApi{
     @GET("/bankUser/{userId}")
     suspend fun getUserByRoutingNum(routingNumber: String): UserDto
 
-    @PUT("/bankUser/{userId}")
+    @PUT("/bankUser/{id}")
     suspend fun depositById(@Path("userID")routingNumber: String, amount: Double) {
     }
 
