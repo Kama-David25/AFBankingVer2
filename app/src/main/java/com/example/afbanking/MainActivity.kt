@@ -7,9 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.example.afbanking.domain.model.User
-import com.example.afbanking.presentation.ui.screens.MainScreen
-import com.example.afbanking.presentation.ui.theme.AFBankingTheme
+import com.example.afbanking.Model.domain.model.User
+import com.example.afbanking.View.presentation.ui.screens.MainScreen
+import com.example.afbanking.View.presentation.ui.theme.AFBankingTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
