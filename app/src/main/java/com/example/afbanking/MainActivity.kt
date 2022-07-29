@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.example.afbanking.Model.domain.model.User
+import com.example.afbanking.model.domain.model.User
 import com.example.afbanking.View.presentation.ui.screens.MainScreen
 import com.example.afbanking.View.presentation.ui.theme.AFBankingTheme
 

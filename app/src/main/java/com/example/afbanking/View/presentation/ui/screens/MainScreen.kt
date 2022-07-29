@@ -22,7 +22,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.afbanking.R
-import com.example.afbanking.Model.domain.model.User
+import com.example.afbanking.model.domain.model.User
 import com.example.afbanking.View.presentation.ui.navigation.BankNavGraph
 import com.example.afbanking.View.presentation.ui.navigation.Routes
 

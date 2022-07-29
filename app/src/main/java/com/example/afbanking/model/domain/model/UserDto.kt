@@ -1,4 +1,4 @@
-package com.example.afbanking.Model.domain.model
+package com.example.afbanking.model.domain.model
 
 import com.google.gson.annotations.SerializedName
 

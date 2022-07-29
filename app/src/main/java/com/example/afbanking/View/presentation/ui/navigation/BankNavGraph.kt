@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.afbanking.Model.domain.model.User
+import com.example.afbanking.model.domain.model.User
 import com.example.afbanking.View.presentation.ui.screens.deposit.DepositScreen
 import com.example.afbanking.View.presentation.ui.screens.home.HomeScreen
 import com.example.afbanking.View.presentation.ui.screens.withdraw.WithdrawScreen

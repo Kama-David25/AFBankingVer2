@@ -11,7 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.afbanking.View.presentation.ui.theme.TealPurp
-import com.example.afbanking.Model.domain.model.User
+import com.example.afbanking.model.domain.model.User
 
 @Composable
 fun HomeScreen(user: User){
