@@ -18,11 +18,9 @@ data class UserDto(
     val userName: String
 )
 
-fun UserDto.toUser(): User {
-    return User(
-        userId = id,
-        firstName = firstName,
-        lastName = lastName,
-        accountBalance = accountBalance
-    )
-}
+fun UserDto.toUser(): User = User(
+    userId = id,
+    firstName = firstName,
+    lastName = lastName,
+    accountBalance = accountBalance
+)
