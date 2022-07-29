@@ -5,7 +5,10 @@ import retrofit2.http.GET
 import retrofit2.http.PUT
 import retrofit2.http.Path
 
-interface AFBankApi{
+
+const val BASE_URL = "http://localhost:3000/"
+
+interface AFBankApiRequest{
 
     @GET("/bankUser/{userId}")
     suspend fun getUserByRoutingNum(@Path("userId")routingNumber: String): UserDto

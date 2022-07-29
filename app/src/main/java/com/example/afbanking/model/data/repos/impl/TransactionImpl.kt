@@ -1,13 +1,13 @@
 package com.example.afbanking.model.data.repos.impl
 
-import com.example.afbanking.model.data.network.AFBankApi
+import com.example.afbanking.model.data.network.AFBankApiRequest
 import com.example.afbanking.model.data.repos.ITransactionRepo
 import com.example.afbanking.model.domain.model.UserDto
 import com.example.afbanking.model.domain.model.toUser
 import javax.inject.Inject
 
 class TransactionImpl @Inject constructor(
-    private val apiCall: AFBankApi
+    private val apiCall: AFBankApiRequest
 ): ITransactionRepo{
     /**
      * Remember to call these methods in a coroutine
