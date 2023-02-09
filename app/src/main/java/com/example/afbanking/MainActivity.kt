@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.afbanking.model.domain.model.User
 import com.example.afbanking.View.presentation.ui.screens.MainScreen
 import com.example.afbanking.View.presentation.ui.theme.AFBankingTheme
@@ -26,5 +28,15 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun DefaultPreview() {
+    AFBankingTheme {
+        // DataItemTypeScreen(listOf("Compose", "Room", "Kotlin"), onSave = {})
+        val me = User("Lord Kama", "123", "456", 600.00)
+        MainScreen(me)
     }
 }

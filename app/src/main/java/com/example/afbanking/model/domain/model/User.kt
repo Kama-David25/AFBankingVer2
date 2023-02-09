@@ -5,6 +5,4 @@ class User (
     val lastName: String,
     val userId: String,
     var accountBalance: Double,
-){
-
-}
+)

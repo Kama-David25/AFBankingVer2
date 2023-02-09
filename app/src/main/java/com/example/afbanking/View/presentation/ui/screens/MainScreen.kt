@@ -27,24 +27,22 @@ import com.example.afbanking.View.presentation.ui.navigation.BankNavGraph
 import com.example.afbanking.View.presentation.ui.navigation.Routes
 
 @Composable
-fun MainScreen(user: User){
+fun MainScreen(user: User) {
     val nav = rememberNavController()
     Scaffold(
         topBar = {
-                 TopBar(user)
+            TopBar(user)
         },
         bottomBar = {
             BottomBar(nav = nav)
         }
-    ){
+    ) {
         BankNavGraph(nav, user)
     }
 }
 
-
-
 @Composable
-fun TopBar(user: User){
+fun TopBar(user: User) {
     Row(
         modifier = Modifier
             .height(100.dp)
@@ -60,7 +58,7 @@ fun TopBar(user: User){
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_baseline_person_pin_24),
-            contentDescription = "Profile pic" ,
+            contentDescription = "Profile pic",
             contentScale = ContentScale.Fit,
             modifier = Modifier.size(80.dp)
         )
@@ -76,6 +74,7 @@ fun TopBar(user: User){
 
     }
 }
+
 @Composable
 fun BottomBar(
     nav: NavHostController
@@ -86,11 +85,11 @@ fun BottomBar(
 
     BottomNavigation(
         elevation = 16.dp
-    ){
+    ) {
         BottomNavigationItem(
             selected = currentDestination?.route == Routes.Home.route,
             onClick = {
-                nav.navigate(Routes.Home.route){
+                nav.navigate(Routes.Home.route) {
                     popUpTo(Routes.Home.route)
                 }
             },
@@ -105,7 +104,7 @@ fun BottomBar(
         BottomNavigationItem(
             selected = currentDestination?.route == Routes.Withdraw.route,
             onClick = {
-                nav.navigate(Routes.Withdraw.route){
+                nav.navigate(Routes.Withdraw.route) {
                     popUpTo(Routes.Withdraw.route)
                 }
             },
@@ -120,7 +119,7 @@ fun BottomBar(
         BottomNavigationItem(
             selected = currentDestination?.route == Routes.Deposit.route,
             onClick = {
-                nav.navigate(Routes.Deposit.route){
+                nav.navigate(Routes.Deposit.route) {
                     popUpTo(Routes.Deposit.route)
                 }
             },

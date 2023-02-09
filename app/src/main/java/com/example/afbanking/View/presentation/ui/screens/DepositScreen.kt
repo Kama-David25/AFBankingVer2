@@ -1,4 +1,4 @@
-package com.example.afbanking.View.presentation.ui.screens.deposit
+package com.example.afbanking.View.presentation.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
